@@ -239,7 +239,7 @@ def compute_transform(cur_signal, name, sr=44100, verbose = False):
         return powerspec[:(fSize//2), :]
     elif (name == "mel"):
         # Compute the mel spectrogram        
-        wMel = librosa.feature.melspectrogram(cur_signal, sr=sr, n_fft=fSize, hop_length=hSize)
+        wMel = librosa.feature.melspectrogram(y=cur_signal, sr=sr, n_fft=fSize, hop_length=hSize)
         return wMel
     elif (name == "chroma"):
         # Compute the chromagram
